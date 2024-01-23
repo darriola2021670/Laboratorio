@@ -7,71 +7,106 @@ body{
     text-align:center;
 }
 
-h1{
-    position:fixed;
-    width:105%;
-    bottom:100px;
-    color: 333;
+section{
+    padding: 150px;
+    margin: 20px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-p {
-    position:fixed;
-    width:100%;
-    bottom:30px;
-    margin-top:200px;
-    font-size: 140%;
-    line-height: 150%;
-    color: 333;
+.slide {
+    position: relative;
+    padding: 25vh 10%;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;
+  }
+
+  .slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+  }
+
+  .title {
+    width: 50%;
+    padding: 5%;
+    border-radius: 5px;
+    background: rgba(240,230,220, .7);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+  }
+  
+  .slide:nth-child(2n) .title {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  .slide:nth-child(2n+1) .title {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .slide, .slide:before {
+    background: 50% 50% / cover;  
   }
 
 #container {
-  text-transform: uppercase;
-  font-size:36px;
-  font-weight:bold;
-  padding-top:200px;  
-  position:fixed;
-  width:105%;
-  bottom:38%;
-  display:block;
-}
+    text-transform: uppercase;
+    font-size:36px;
+    font-weight:bold;
+    padding-top:200px;  
+    width:105%;
+    bottom:38%;
+    display:block;
+  }
 
-#flip {
-  height:50px;
-  overflow:hidden;
-}
+  #flip {
+    height:50px;
+    overflow:hidden;
+  }
 
-#flip > div > div {
-  color:#fff;
-  padding:4px 12px;
-  height:45px;
-  margin-bottom:45px;
-  display:inline-block;
-}
+  #flip > div > div {
+    color:#fff;
+    padding:4px 12px;
+    height:45px;
+    margin-bottom:45px;
+    display:inline-block;
+  }
 
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
-
-#flip div div {
-  background:#42c58a;
-}
-#flip div:first-child div {
-  background:#4ec7f3;
-}
-#flip div:last-child div {
-  background:#DC143C;
-}
-
-@keyframes show {
-  0% {margin-top:-270px;}
-  5% {margin-top:-180px;}
-  33% {margin-top:-180px;}
-  38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-260px;}
-}
+  #flip div:first-child {
+    animation: show 5s linear infinite;
+  }
+  
+  #flip div div {
+    background:#42c58a;
+  }
+  #flip div:first-child div {
+    background:#4ec7f3;
+  }
+  #flip div:last-child div {
+    background:#DC143C;
+  }
+  
+  @keyframes show {
+    0% {margin-top:-270px;}
+    5% {margin-top:-180px;}
+    33% {margin-top:-180px;}
+    38% {margin-top:-90px;}
+    66% {margin-top:-90px;}
+    71% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-260px;}
+  }
+  
 
   
 
